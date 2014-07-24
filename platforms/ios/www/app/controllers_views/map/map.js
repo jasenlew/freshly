@@ -103,6 +103,10 @@ angular.module('freshly.map', [
       $state.go("^.capture", {"location": JSON.stringify({lat: e.latlng.lat, lng: e.latlng.lng})});
     });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> iOS console.logs
     // triggered anytime the map is moved in anyway (zoomed, panned, etc) as well as on instantiation
     map.on('move', function(e) {
 
@@ -119,7 +123,7 @@ angular.module('freshly.map', [
               }
               if(LocationService.inBounds(latlng, map)){
                 var marker = new L.marker({lat: activities[i].lat,lng: activities[i].lng}, activities[i]);
-                marker.on("click", function() {
+                marker.on("mouseover", function() {
                   $scope.$apply(function(){
                     $scope.clicked = this.options;
                     $scope.pinInfo = true;
